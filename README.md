@@ -1,1 +1,1 @@
-# Coursera-YandexMipt-FrontEnd
+# Специализация Разработка интерфейсов: вёрстка и JavaScript
