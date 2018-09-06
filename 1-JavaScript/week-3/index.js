@@ -11,11 +11,16 @@ module.exports = function (date) {
     var hour = output[4]-3+6;
     var minute = output[5];
     var dateObj = { date: new Date(year, month, day, hour, minute),
-
-        add: function (amount, property) {
-
+        _errorcatcher: function (amount, property) {
             var allowedProperties=['days', 'hours', 'minutes', 'years', 'months'];
             if (amount < 0 || allowedProperties.indexOf(property)===-1 ) {
+
+                return true;
+            }
+        },
+        add: function (amount, property) {
+
+            if(this._errorcatcher(amount, property)===true) {
                 throw new TypeError("Неверное значение");
             }
             if (property==="days") {
@@ -42,8 +47,7 @@ module.exports = function (date) {
         },
         subtract: function (amount, property) {
 
-            var allowedProperties=['days', 'hours', 'minutes', 'years', 'months'];
-            if (amount < 0 || allowedProperties.indexOf(property)==-1 ) {
+            if(this._errorcatcher(amount, property)===true) {
                 throw new TypeError("Неверное значение");
             }
             if (property==="days") {
