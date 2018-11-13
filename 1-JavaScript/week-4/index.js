@@ -3,55 +3,59 @@
  * @params {Function[]} – Функции для запроса
  * @returns {Array}
  */
-function query(collection) {
-    var args = [].slice.call(arguments);
-    collectionCopy = JSON.parse(JSON.stringify(collection));
 
-    for (var argumentInd=1; argumentInd<args.length; argumentInd++) {
-        if (args[argumentInd][0]==='select') {
+function query(collection, ...rest) {
+    var collectionCopy = JSON.parse( JSON.stringify(collection) );  /*array*/
+    var functions = rest.sort();
 
-            var fieldNamesArray = args[argumentInd][1];
-            collectionCopy.forEach(filterFields);
-            function filterFields(person) {
-                var personHasFields=Object.keys(person);
-                for (item=0; item<personHasFields.length; item++) {
-                    if (fieldNamesArray.indexOf(personHasFields[item])===-1) {
-                        delete person[personHasFields[item]]
-                    }
-                }
-            }
-        } else if (args[argumentInd][0]==="filterIn") {
-            var fieldName = args[argumentInd][1];
-            var fieldValuesArray = args[argumentInd][2];
-            collectionCopy.forEach(filterPeople);
-            function filterPeople(person, index) {
-                if (fieldValuesArray.indexOf(person[fieldName])===-1) {
-                    collectionCopy.splice(index,1);
-                }
-            }
-        }
-
+    for (var i=0; i<functions.length; i++) {
+        collectionCopy=functions[i](collectionCopy);
     }
-
     return collectionCopy;
 }
 
-/**
- * @params {String[]}
- */
+
+
+function filterIn(fieldName, fieldValuesArray) {
+    var field = fieldName;  /*название поля для сортировки*/
+    var values = fieldValuesArray; /*допустимые значения*/
+    function checkifPersonProper(person) {
+        return fieldValuesArray.indexOf(person[field]) !== -1;
+    }
+
+    return function(collectionCopy) {
+        collectionCopy = collectionCopy.filter(checkifPersonProper);
+        return collectionCopy
+    }
+}
+
 function select() {
-    fieldNamesArray=[].slice.call(arguments);
-    return (['select', fieldNamesArray]);
+    var [fieldNames] = [arguments];
+    [...fieldNames]=fieldNames; /*fieldNames-array*/
+    return function (collectionCopy) {
+        var [collectionCopy] = arguments;  /*collectionCopy-array*/
+        collectionCopy=collectionCopy.map(render);
+        function render(person){ /*person-Object*/
+            return Object.keys(person)
+                .filter(key =>fieldNames.includes(key))
+                .reduce((obj, key) => {
+                    return {
+                        ...obj,
+                        [key]: person[key]
+                    };
+                }, {})
+
+
+        }
+        return collectionCopy;
+    }
+
 }
 
-/**
- * @param {String} property – Свойство для фильтрации
- * @param {Array} values – Массив разрешённых значений
- */
-function filterIn(property, values) {
-    return['filterIn', property, values];
 
-}
+
+
+
 
 module.exports = {
     query: query,
