@@ -4,11 +4,13 @@
  * @returns {Array}
  */
 
+
 function query(collection, ...rest) {
     var collectionCopy = JSON.parse( JSON.stringify(collection) );  /*array*/
     var functions = rest.sort();
-
+    functions;
     for (var i=0; i<functions.length; i++) {
+
         collectionCopy=functions[i](collectionCopy);
     }
     return collectionCopy;
@@ -17,42 +19,56 @@ function query(collection, ...rest) {
 
 
 function filterIn(fieldName, fieldValuesArray) {
-    var field = fieldName;  /*название поля для сортировки*/
-    var values = fieldValuesArray; /*допустимые значения*/
+
     function checkifPersonProper(person) {
-        return fieldValuesArray.indexOf(person[field]) !== -1;
+
+        return fieldValuesArray.indexOf(person[fieldName]) !== -1;
+
     }
 
-    return function(collectionCopy) {
-        collectionCopy = collectionCopy.filter(checkifPersonProper);
-        return collectionCopy
+    return function filterIn(collectionCopy) {
+        if (fieldName !== undefined && fieldValuesArray.length>0) {
+            collectionCopy = collectionCopy.filter(checkifPersonProper);
+            return collectionCopy
+        } else {
+            return collectionCopy
+        }
     }
 }
+
 
 function select() {
     var [fieldNames] = [arguments];
     [...fieldNames]=fieldNames; /*fieldNames-array*/
-    return function (collectionCopy) {
-        var [collectionCopy] = arguments;  /*collectionCopy-array*/
-        collectionCopy=collectionCopy.map(render);
-        function render(person){ /*person-Object*/
-            return Object.keys(person)
-                .filter(key =>fieldNames.includes(key))
-                .reduce((obj, key) => {
-                    return {
-                        ...obj,
-                        [key]: person[key]
-                    };
-                }, {})
-
-
+    return function select(collectionCopy) {
+        var allowedFields = collectionCopy.reduce((acc, person ) => {
+            return acc.concat(Object.keys(person)||[])
+        }, []);
+        for (var i=0; i<fieldNames.length; i++) {
+            if (allowedFields.indexOf(fieldNames[i])===-1) {
+                fieldNames.splice(i, 1);
+            }
         }
-        return collectionCopy;
-    }
+        if (fieldNames.length>0 && fieldNames[0].length>0 ) {
+            /*collectionCopy-array*/
+            collectionCopy = collectionCopy.map(render);
 
-}
+            function render(person) { /*person-Object*/
+                return Object.keys(person)
+                             .filter(key => fieldNames.includes(key))
+                             .reduce((obj, key) => {
+                        return {
+                            ...obj,
+                            [key]: person[key]
+                        };
+                    }, {})
 
 
+            } }
+
+            return collectionCopy;
+
+    } }
 
 
 
