@@ -139,7 +139,7 @@ assert.deepEqual(result4,[{name: 'Сэм',gender: 'Мужской', email: 'luis
 );
 
 console.info('4OK!');
-// filterIn() или filterIn('favoriteFruit', [])  - применяем query и select к первоначальному массиву friends.
+// filterIn() has been called uncorrectly - only select must be applied
 
 var result5 = lib.query(
     friends,
@@ -159,7 +159,8 @@ assert.deepEqual(result5,[{name: 'Сэм',gender: 'Мужской', email: 'luis
 
 console.info('5OK!');
 
-/// filterIn() или filterIn('favoriteFruit', [])  - применяем query и select к первоначальному массиву friends.
+
+// filterIn() has been called uncorrectly - only select must be applied
 var result6 = lib.query(
     friends,
     lib.filterIn('favoriteFruit', [])
@@ -175,7 +176,7 @@ assert.deepEqual(result6,[{name: 'Сэм',gender: 'Мужской', email: 'luis
 );
 
 console.info('6OK!');
-// select(['Несуществующее поле']) - в результате выборки выводим результат фильтрации
+// select(['Inexisting field']) select must be ignored
 
 var result7 = lib.query(
     friends,
@@ -192,7 +193,7 @@ assert.deepEqual(result7,[{name: 'Сэм',gender: 'Мужской', email: 'luis
 );
 
 console.info('OK!');
-//filterIn('favoriteFruit', ['Несуществующее значение']) - в результате фильтрации не остается объектов
+//filterIn('favoriteFruit', ['Inexisting field']) - no objects to show
 
 var result8 = lib.query(
     friends,
@@ -203,7 +204,7 @@ var result8 = lib.query(
 assert.deepEqual(result8,[]);
 
 console.info('8OK!');
-//select([]) - игнорируйте такую операцию и возвращайте отфильтрованную коллекцию со всеми полями.
+//select([]) - select ignored
 var result9 = lib.query(
     friends,
     lib.select([]),
@@ -231,7 +232,7 @@ assert.deepEqual(result10,[{name: 'Эмили',gender: 'Женский',email: '
 );
 
 console.info('OK!');
-// 2) поля для селекции могут повторяться в одном операторе select.
+// fields may be repeated
 var result11 = lib.query(
     friends,
     lib.select('name', 'gender', 'email', 'email')
