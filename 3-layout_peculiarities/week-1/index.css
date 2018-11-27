@@ -1,0 +1,111 @@
+@font-face {
+	font-family: 'YS Text', sans-serif;
+	src: url('/fonts/YandexSansDisplay-Thin.ttf');
+}
+
+* {
+	font-family: YS Text;
+}
+
+.board {
+	box-sizing: border-box;
+	background: #eee;
+	padding: 0px;
+	position: absolute;
+    max-width:1200px;  
+}
+
+
+.col 
+ {	position: relative;   
+	display: inline-block;
+	width: 210px;
+	padding-left:  15px;
+	vertical-align: top;
+	text-align:left;
+}
+
+
+
+ img {
+ 	display: block;
+ 	margin: 0 auto;
+	max-width: 200px;
+}
+
+p {
+	font-size: 13px;
+}
+
+a {	white-space: nowrap;
+	display: inline-block;
+	overflow:hidden;
+	width: 150px;
+	text-overflow:ellipsis;
+	transition-property: color;
+	
+}
+
+a:hover, .n-cat__info:hover {
+
+	color: red;
+}
+.n-cat__info {
+	cursor: pointer;
+	display: inline-block;
+	padding:  5px;
+	font-size: 10px;
+	color: rgb(77, 77, 77);
+	transition-property: color;
+	text-decoration: underline;
+}
+
+.n-price {
+	display: inline-block;
+	font-size: 15px;
+	color: #870f0f;
+	font-weight: bold;
+}
+
+/* Star rating*/
+.review_stars_wrap {
+  overflow: hidden;
+}
+
+#review_stars {
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+
+#review_stars input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+
+}
+
+#review_stars input~label i {
+  color: #ccc;
+}
+
+#review_stars input:checked~label i {
+  color: #ec9801;
+}
+
+#review_stars label {
+  float: right;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+#review_stars label:hover i,
+#review_stars label:hover~label i {
+  color: #ec9801;
+}
+
+
+/* Star rating*/
+
