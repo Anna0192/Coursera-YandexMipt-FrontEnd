@@ -1,121 +1,282 @@
 <!DOCTYPE html>
 <html>
-<head>
+
+  <head>
     <meta charset="utf-8">
-    <title>Мяндекс.Мурркет</title>
+    <title>Мяндекс.Муррркет</title>
     <link rel="stylesheet" href="./index.css">
     <link rel="icon" href="icons/Graphicloads-100-Flat-Cart.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-</head>
-	<body>
-		<div class="board">
-			
-				<div class="col">
-					<img src='http://ru.wallfon.com/walls/animals/black-cat-6713.jpg' alt=""/>
-					<a href="http://ru.wallfon.com/walls/animals/black-cat-6713.jpg" >Антон</a>
-					<span class="n-cat__info"> small</span>
+  </head>
 
-						<div class="review_stars_wrap">
-						  <div id="review_stars">
-						    <input id="star-4" type="radio" name="stars" />
-						    <label for="star-4">
-							    	<i class="fas fa-star"></i>
-							    </label>
-						    <input id="star-3" type="radio" name="stars" />
-						    <label for="star-3">
-							    	<i class="fas fa-star"></i>
-							    </label>
-						    <input id="star-2" type="radio" name="stars" checked="checked" />
-						    <label for="star-2">
-							    	<i class="fas fa-star"></i>
-							    </label>
-						    <input id="star-1" type="radio" name="stars" />
-						    <label  for="star-1">
-							    	<i class="fas fa-star"></i>
-							    </label>
-						    <input id="star-0" type="radio" name="stars" />
-						    <label for="star-0">
-							    	<i class="fas fa-star"></i>
-							    </label>
-						  </div>
-						</div>
+  <body>
+    <div class="board">
+    	
+    	<input type="checkbox" id="displ_cell" name="dislay_property"><div class="displ_property_sign"><label for="displ_cell">cell</label></div> <div style="height: 40px;"></div>
+
+      <div class="content_cell">
+        <img src='http://ru.wallfon.com/walls/animals/black-cat-6713.jpg' alt="" />
+        <div class="content_cell_info">
+        	<div class="content_holder">
+	          <a href="http://ru.wallfon.com/walls/animals/black-cat-6713.jpg">Антон</a>
+	            <div class="n-cat__info"><span > Small</span></div>
+	           <fieldset class="rate">
+				    <input type="radio" id="rating10" name="rating" value="10" /><label for="rating10"></label>
+				    <input type="radio" id="rating9" name="rating" value="9" /><label class="half" for="rating9"></label>
+				    <input type="radio" id="rating8" name="rating" value="8" /><label for="rating8"></label>
+				    <input type="radio" id="rating7" name="rating" value="7" /><label class="half" for="rating7"></label>
+				    <input type="radio" id="rating6" name="rating" value="6" /><label for="rating6"></label>
+				    <input type="radio" id="rating5" name="rating" value="5" /><label class="half" for="rating5"></label>
+				    <input type="radio" id="rating4" name="rating" value="4" /><label for="rating4"></label>
+				    <input type="radio" id="rating3" name="rating" value="3" /><label class="half" for="rating3"></label>
+				    <input type="radio" id="rating2" name="rating" value="2" /><label for="rating2"></label>
+				    <input type="radio" id="rating1" name="rating" value="1" /><label class="half" for="rating1"></label>
+
+				</fieldset>
+	          <div class="n-price">1 500 ₽ <span class="n-former__price">1000 ₽</span></div>
+            </div>
+          <p>Чёрные кошки — объект суеверий различных народов. По мнению одних суеверных, служит предвестником несчастья (например, если чёрная кошка перебегает дорогу, то это приводит к дальнейшим неудачам в жизни). По мнению других суеверных, например,
+            живущая в доме чёрная кошка приносит удачу. Предрассудки не зависят от породы кошки и касаются только её окраса.</p>
+        </div>
+      </div>
+
+      <div class="content_cell"> <img src='http://i.ucrazy.ru/files/i/2012.2.7/1328622912_31.jpg' alt="" />
+        <div class="content_cell_info">
+        	<div class="content_holder">
+          <a href="http://ucrazy.ru/pets/page_114.html"><div class="invisible">Удивительная Тутси</div></a>
+          <div class="n-cat__info"><span > Furious</span>
+          <span> Удивительная</span></div>
+          <fieldset class="rate">
+    <input type="radio" id="rating100" name="rating1" value="10" /><label for="rating100"></label>
+    <input type="radio" id="rating99" name="rating1" value="9" /><label class="half" for="rating99"></label>
+    <input type="radio" id="rating88" name="rating1" value="8" /><label for="rating88"></label>
+    <input type="radio" id="rating77" name="rating1" value="7" /><label class="half" for="rating77"></label>
+    <input type="radio" id="rating66" name="rating1" value="6" /><label for="rating66"></label>
+    <input type="radio" id="rating55" name="rating1" value="5" /><label class="half" for="rating55"></label>
+    <input type="radio" id="rating44" name="rating1" value="4" /><label for="rating44"></label>
+    <input type="radio" id="rating33" name="rating1" value="3" /><label class="half" for="rating33"></label>
+    <input type="radio" id="rating22" name="rating1" value="2" /><label for="rating22"></label>
+    <input type="radio" id="rating11" name="rating1" value="1" /><label class="half" for="rating11"></label>
+
+  </fieldset>
+          <div class="n-price">1 500 ₽ <span class="n-former__price">3000 ₽</span></div>
+      </div>
+          <p>Как видите - Тутси имеет чёрный окрас, но разноцветные глаза. Это очень редко встречается, так что успевайте взять именно её к себе домой. Тем более она была найдена уже давно, поэтому абсолютно здорова, воспитана и трепетно относится к людям.
+            Возраст - около полугода. Настоящий четвероногий друг!</p>
+        </div>
+      </div>
+
+      <div class="content_cell">
+        <img src='http://catspaw.ru/wp-content/uploads/2017/02/Sfinks_koshka_vnON1.jpg' alt="" />
+        <div class="content_cell_info">
+        		<div class="content_holder">
+          <a href="https://www.yandex.ru/search/?text=%D0%BA%D0%BE%D1%82%D1%8B&lr=47"> Вика</a>
+          <div class="n-cat__info"><span > Очень добрая</span></div>
+          <fieldset class="rate">
+    <input type="radio" id="rating102" name="rating2" value="10" /><label for="rating102"></label>
+    <input type="radio" id="rating92" name="rating2" value="9" /><label class="half" for="rating92"></label>
+    <input type="radio" id="rating82" name="rating2" value="8" /><label for="rating82"></label>
+    <input type="radio" id="rating72" name="rating2" value="7" /><label class="half" for="rating72"></label>
+    <input type="radio" id="rating62" name="rating2" value="6" /><label for="rating62"></label>
+    <input type="radio" id="rating52" name="rating2" value="5" /><label class="half" for="rating52"></label>
+    <input type="radio" id="rating42" name="rating2" value="4" /><label for="rating42"></label>
+    <input type="radio" id="rating32" name="rating2" value="3" /><label class="half" for="rating32"></label>
+    <input type="radio" id="rating222" name="rating2" value="2" /><label for="rating222"></label>
+    <input type="radio" id="rating12" name="rating2" value="1" /><label class="half" for="rating12"></label>
+
+  </fieldset>
+          <div class="n-price">1 500 ₽</div> </div>
+          <p>Канадские сфинксы — одна из нескольких пород кошек. В нынешний момент это полностью сформированная и достаточно стабильная порода с 50-летним стажем, передающая свои признаки по рецессивному типу. Порода признана всеми международными фелинологическими
+            организациями. Другие лысые кошки - петерболд и донской сфинкс - относительно молоды (около 15 лет) и нынешний находятся на пути становления.</p>
+        </div>
+      </div>
+
+      <div class="content_cell">
+        <img src='http://coolrobo.ru/uploads/posts/2018-04/15234630301111.jpeg' alt="" />
+        <div class="content_cell_info">
+        	<div class="content_holder">
+          <a href="https://www.yandex.ru/search/?text=%D0%BA%D0%BE%D1%82%D1%8B&lr=47">Вячеслав</a>
+            <div class="n-cat__info"><span > С характером</span></div>
+          <fieldset class="rate">
+    <input type="radio" id="rating103" name="rating3" value="10" /><label for="rating103"></label>
+    <input type="radio" id="rating93" name="rating3" value="9" /><label class="half" for="rating93"></label>
+    <input type="radio" id="rating83" name="rating3" value="8" /><label for="rating83"></label>
+    <input type="radio" id="rating73" name="rating3" value="7" /><label class="half" for="rating73"></label>
+    <input type="radio" id="rating63" name="rating3" value="6" /><label for="rating63"></label>
+    <input type="radio" id="rating53" name="rating3" value="5" /><label class="half" for="rating53"></label>
+    <input type="radio" id="rating43" name="rating3" value="4" /><label for="rating43"></label>
+    <input type="radio" id="rating333" name="rating3" value="3" /><label class="half" for="rating333"></label>
+    <input type="radio" id="rating23" name="rating3" value="2" /><label for="rating23"></label>
+    <input type="radio" id="rating13" name="rating3" value="1" /><label class="half" for="rating13"></label>
+
+  </fieldset>
+          <div class="n-price">1 500 ₽</div></div>
+          <p>Голые кошки являются уникальными животными. Их часто заводят творческие личности, а также любители духовных практик. Из-за своей необычной внешности и особенностей характера они создают такое впечатление, что наделены мистическими свойствами.
+            Линиями тела они напоминают статуэтку, а их магический взгляд способен навести на мысль, что это инопланетные существа.</p>
+        </div>
+      </div>
+
+      <div class="content_cell"> <img src='http://udivitelno.com/images/7/lysaja-koshka-sfinks/3-%D0%9B%D1%8B%D1%81%D0%B0%D1%8F%20%D0%BA%D0%BE%D1%88%D0%BA%D0%B0%20%D0%BF%D0%BE%D1%80%D0%BE%D0%B4%D1%8B%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%B4%D1%81%D0%BA%D0%B8%D0%B9%20%D1%81%D1%84%D0%B8%D0%BD%D0%BA%D1%81.jpg'
+          alt="" />
+        <div class="content_cell_info">
+        	<div class="content_holder">
+          <a href="http://ucrazy.ru/pets/page_114.html">Изящный Иван</a>
+            <div class="n-cat__info"><span > Small</span></div>
+          <fieldset class="rate">
+    <input type="radio" id="rating104" name="rating4" value="10" /><label for="rating104"></label>
+    <input type="radio" id="rating94" name="rating4" value="9" /><label class="half" for="rating94"></label>
+    <input type="radio" id="rating84" name="rating4" value="8" /><label for="rating84"></label>
+    <input type="radio" id="rating74" name="rating4" value="7" /><label class="half" for="rating74"></label>
+    <input type="radio" id="rating64" name="rating4" value="6" /><label for="rating64"></label>
+    <input type="radio" id="rating54" name="rating4" value="5" /><label class="half" for="rating54"></label>
+    <input type="radio" id="rating444" name="rating4" value="4" /><label for="rating444"></label>
+    <input type="radio" id="rating34" name="rating4" value="3" /><label class="half" for="rating34"></label>
+    <input type="radio" id="rating24" name="rating4" value="2" /><label for="rating24"></label>
+    <input type="radio" id="rating14" name="rating4" value="1" /><label class="half" for="rating14"></label>
+
+  </fieldset>
+          <div class="n-price">1 500 ₽</div>
+      </div>
+          <p>Вариант CFA Длина головы слегка больше её ширины, с выступающими скулами и отчётливым «пинчем» (линия перехода от скул к морде с заметным «перехватом»). Череп слегка округлый с плоским участком впереди ушей. Нос прямой, с лёгким или средним
+            пальпируемым стопом (в месте перехода от лба к носу должна быть ясно выраженная «ямочка» или «ложбинка»). Выраженные, округлые дуги скул, очерчивающие глазницы и идущие выпуклыми кривыми выше «пинча». «Пинч» с хорошо выраженными подушечками
+            усов. Сильный, хорошо развитый подбородок образует перпендикулярную линию с верхней губой.</p>
+        </div>
+      </div>
+
+      <div class="content_cell">
+      	
+        <img src='http://ladynumber1.com/wp-content/uploads/2017/03/koshki-porody-sfinks-900x641.jpg' alt="" />
+        <div class="content_cell_info"> <div class="content_holder">
+          <a href="https://www.yandex.ru/search/?text=%D0%BA%D0%BE%D1%82%D1%8B&lr=47"> Тройняшки</a>
+          <div class="n-cat__info"><span >Three in a bag!</span></div>
+          <fieldset class="rate">
+    <input type="radio" id="rating105" name="rating5" value="10" /><label for="rating105"></label>
+    <input type="radio" id="rating95" name="rating5" value="9" /><label class="half" for="rating95"></label>
+    <input type="radio" id="rating85" name="rating5" value="8" /><label for="rating85"></label>
+    <input type="radio" id="rating75" name="rating5" value="7" /><label class="half" for="rating75"></label>
+    <input type="radio" id="rating65" name="rating5" value="6" /><label for="rating65"></label>
+    <input type="radio" id="rating555" name="rating5" value="5" /><label class="half" for="rating555"></label>
+    <input type="radio" id="rating45" name="rating5" value="4" /><label for="rating45"></label>
+    <input type="radio" id="rating35" name="rating5" value="3" /><label class="half" for="rating35"></label>
+    <input type="radio" id="rating25" name="rating5" value="2" /><label for="rating25"></label>
+    <input type="radio" id="rating15" name="rating5" value="1" /><label class="half" for="rating15"></label>
+
+  </fieldset>
+          <div class="n-price">4 500 ₽ </div> </div>
+          <p>Египетский сфинкс относится к породам лысых кошек, зарегистрированным в прошлом веке. Как гласят предания, такие животные были проводниками между людьми и богами. Но есть сведения, что лысую кошку сфинкс приручили еще в древности, во времена
+            ацтеков, которые преклонялись необычным животным. Эти создания являлись живым украшением дворцов фараонов Египта. Есть данные, что порода кошек, выглядевших необычно, существовала в начале века в Мексике, Марокко и Индии. Но поскольку этим
+            животным не придавали особого значения, они вымерли.</p>
+        </div>
+      </div>
+
+      <div class="content_cell">
+      	
+        <img src='https://avatars.mds.yandex.net/get-pdb/27625/c7ee13df-317a-4e1d-bc7e-066378fd0c68/s1200?webp=false' alt="" />
+        <div class="content_cell_info"> <div class="content_holder">
+          <a href="https://www.yandex.ru/search/?text=%D0%BA%D0%BE%D1%82%D1%8B&lr=47"><div class="invisible">Маррррргарррррита Ивановна </div> </a> 
+          <div class="n-cat__info"><span > Sleepy</span></div>
+          <fieldset class="rate">
+    <input type="radio" id="rating106" name="rating7" value="10" /><label for="rating107"></label>
+    <input type="radio" id="rating97" name="rating7" value="9" /><label class="half" for="rating97"></label>
+    <input type="radio" id="rating87" name="rating7" value="8" /><label for="rating87"></label>
+    <input type="radio" id="rating777" name="rating7" value="7" /><label class="half" for="rating777"></label>
+    <input type="radio" id="rating67" name="rating7" value="6" /><label for="rating67"></label>
+    <input type="radio" id="rating57" name="rating7" value="5" /><label class="half" for="rating57"></label>
+    <input type="radio" id="rating47" name="rating7" value="4" /><label for="rating47"></label>
+    <input type="radio" id="rating37" name="rating7" value="3" /><label class="half" for="rating37"></label>
+    <input type="radio" id="rating27" name="rating7" value="2" /><label for="rating27"></label>
+    <input type="radio" id="rating17" name="rating7" value="1" /><label class="half" for="rating17"></label>
+
+  </fieldset>
+          <div class="n-price">1 500 ₽ </div>
+      </div>
+          <p>Вариант TICA Голова среднего размера, форма — модифицированный клин с округлыми контурами, длина головы несколько больше её ширины. Череп — слегка округлый с довольно плоской передней частью, выраженные скулы. Профиль — легкий или средний стоп
+            на переносице. Округлая морда с отчетливо выраженными подушечками усов и сильным подбородком. Шея средней длины, округлая и мускулистая. Слегка выгнута от линии плеч до основания черепа. </p>
+        </div>
+      </div>
+
+      <div class="content_cell ">
+      	
+        <img src='https://xakep.ru/wp-content/uploads/2016/04/black-bg-cat-sphinx-h.jpg' alt="" />
+        <div class="content_cell_info"><div class="content_holder">
+          <a href="https://www.yandex.ru/search/?text=%D0%BA%D0%BE%D1%82%D1%8B&lr=47"> Мария</a>
+           <div class="n-cat__info"><span > Clever</span></div>
+          <fieldset class="rate">
+    <input type="radio" id="rating106" name="rating6" value="10" /><label for="rating106"></label>
+    <input type="radio" id="rating96" name="rating6" value="9" /><label class="half" for="rating96"></label>
+    <input type="radio" id="rating86" name="rating6" value="8" /><label for="rating86"></label>
+    <input type="radio" id="rating76" name="rating6" value="7" /><label class="half" for="rating76"></label>
+    <input type="radio" id="rating666" name="rating6" value="6" /><label for="rating666"></label>
+    <input type="radio" id="rating56" name="rating6" value="5" /><label class="half" for="rating56"></label>
+    <input type="radio" id="rating46" name="rating6" value="4" /><label for="rating46"></label>
+    <input type="radio" id="rating36" name="rating6" value="3" /><label class="half" for="rating36"></label>
+    <input type="radio" id="rating26" name="rating6" value="2" /><label for="rating26"></label>
+    <input type="radio" id="rating16" name="rating6" value="1" /><label class="half" for="rating16"></label>
+
+  </fieldset>
+          <div class="n-price">1 500 ₽ </div></div>
+          <p>Эта кошка с горячим, напоминающим замшу шершавым телом (ощущаешь, когда берешь питомца на руки) не прочь посидеть на плече хозяйки или хозяина. В отличие от своих сородичей других пород спокойно относится к водным процедурам, радуется возможности
+            поплескаться. У неё необычные лапы с пальчиками, между которыми есть перепонки. Поэтому Марии нетрудно брать еду и класть себе в рот.</p>
+        </div>
+      </div>
+
+      <div class="content_cell">
+      	
+       		 <img src='http://warnet.ws/img/578/pod/129.jpg' alt="" />
+        <div class="content_cell_info">
+        	<div class="content_holder">
+          <a href="https://www.yandex.ru/search/?text=%D0%BA%D0%BE%D1%82%D1%8B&lr=47"> Изабелла</a>
+           <div class="n-cat__info"><span > Playful</span></div>
+          <fieldset class="rate">
+    <input type="radio" id="rating108" name="rating8" value="10" /><label for="rating108"></label>
+    <input type="radio" id="rating98" name="rating8" value="9" /><label class="half" for="rating98"></label>
+    <input type="radio" id="rating888" name="rating8" value="8" /><label for="rating888"></label>
+    <input type="radio" id="rating78" name="rating8" value="7" /><label class="half" for="rating78"></label>
+    <input type="radio" id="rating68" name="rating8" value="6" /><label for="rating68"></label>
+    <input type="radio" id="rating58" name="rating8" value="5" /><label class="half" for="rating58"></label>
+    <input type="radio" id="rating48" name="rating8" value="4" /><label for="rating48"></label>
+    <input type="radio" id="rating38" name="rating8" value="3" /><label class="half" for="rating38"></label>
+    <input type="radio" id="rating28" name="rating8" value="2" /><label for="rating28"></label>
+    <input type="radio" id="rating18" name="rating8" value="1" /><label class="half" for="rating18"></label>
+
+  </fieldset>
+
+          <div class="n-price">1 500 ₽ </div>
+      </div>
+          <p>Любопытное животное будет всегда рядом с домочадцами и другими питомцами. У кошки сфинкс характер замечательный. Агрессивность не в ее характере, поэтому можно смело заводить таких питомцев, если в семье есть дети. Они могут стать хорошими нянями
+            для малышей и помогают родителям их воспитывать. Учитывая эти качества, кошку сфинкс любят за то, что она умна и умеет общаться. Ее используют в качестве терапии для больных. Их заводят приверженцы духовных практик.</p>
+        </div>
+      </div>
+
+      <div class="content_cell">
+        <img src='https://avatars.mds.yandex.net/get-pdb/27625/faac9879-10f8-46fe-82f6-031b64a72912/s1200' alt="" />
+        <div class="content_cell_info">
+        	<div class="content_holder">
+        		<a href="https://www.yandex.ru/search/?text=%D0%BA%D0%BE%D1%82%D1%8B&lr=47"> Сеня</a>
+         <div class="n-cat__info"><span > Funny</span></div>
+        <fieldset class="rate">
+    <input type="radio" id="rating109" name="rating9" value="10" /><label for="rating109"></label>
+    <input type="radio" id="rating999" name="rating9" value="9" /><label class="half" for="rating999"></label>
+    <input type="radio" id="rating89" name="rating9" value="8" /><label for="rating89"></label>
+    <input type="radio" id="rating79" name="rating9" value="7" /><label class="half" for="rating79"></label>
+    <input type="radio" id="rating69" name="rating9" value="6" /><label for="rating69"></label>
+    <input type="radio" id="rating59" name="rating9" value="5" /><label class="half" for="rating59"></label>
+    <input type="radio" id="rating49" name="rating9" value="4" /><label for="rating49"></label>
+    <input type="radio" id="rating39" name="rating9" value="3" /><label class="half" for="rating39"></label>
+    <input type="radio" id="rating29" name="rating9" value="2" /><label for="rating29"></label>
+    <input type="radio" id="rating19" name="rating9" value="1" /><label class="half" for="rating19"></label>
+
+  </fieldset>
+          <div class="n-price">1 500 ₽ </div></div>
+          <p>Умиляет то, как спят сфинксы — завернувшись в одеяло. Головку при этом кладут на подушку. У них горячее тело (несколько повышенная температура, в отличие от людей), которым они прижимаются во время сна к хозяйке или хозяину. Потеют как люди.
+          Сеня - тот котик, которого Вы хотели!</p>
+        </div>
+      </div>
 
 
-					<span class="n-price">1500 руб</span>
-					<span class="n-former__price"></span>
-				
-				</div>
-				<div class="col"> <img src='http://i.ucrazy.ru/files/i/2012.2.7/1328622912_31.jpg' alt=""/>
-					<a href="http://ucrazy.ru/pets/page_114.html" >Удивительная Тутси</a>
-					<span class="n-cat__info"> furious</span>
-					<span class="n-cat__info"> old</span>
 
-						<div class="review_stars_wrap">
-						  <div id="review_stars">
-						    <input id="star-4" type="radio" name="stars" />
-						    <label for="star-4">
-							    	<i class="fas fa-star"></i>
-							    </label>
-						    <input id="star-3" type="radio" name="stars" />
-						    <label for="star-3">
-							    	<i class="fas fa-star"></i>
-							    </label>
-						    <input id="star-2" type="radio" name="stars" checked="checked" />
-						    <label for="star-2">
-							    	<i class="fas fa-star"></i>
-							    </label>
-						    <input id="star-1" type="radio" name="stars" />
-						    <label  for="star-1">
-							    	<i class="fas fa-star"></i>
-							    </label>
-						    <input id="star-0" type="radio" name="stars" />
-						    <label for="star-0">
-							    	<i class="fas fa-star"></i>
-							    </label>
-						  </div>
-						</div>
+    </div>
 
-					<p>Как видите - Тутси имеет чёрный окрас, но разноцветные глаза. Это очень редко встречается, так что успевайте взять именно её к себе домой. Тем более она была найдена уже давно, поэтому абсолютно здорова, воспитана и трепетно относится к людям. Возраст - около полугода. Настоящий четвероногий друг!</p>					
+  </body>
 
-				</div>
-				<div class="col"> 
-					<img src='http://catspaw.ru/wp-content/uploads/2017/02/Sfinks_koshka_vnON1.jpg' alt=""/>
-					<a href="https://www.yandex.ru/search/?text=%D0%BA%D0%BE%D1%82%D1%8B&lr=47"> Вика</a>
-
-				</div>
-				<div class="col">
-					<img src='http://coolrobo.ru/uploads/posts/2018-04/15234630301111.jpeg' alt=""/>
-					<a href="https://www.yandex.ru/search/?text=%D0%BA%D0%BE%D1%82%D1%8B&lr=47" >Вячеслав</a>
-				</div>
-				<div class="col"> <img src='http://udivitelno.com/images/7/lysaja-koshka-sfinks/3-%D0%9B%D1%8B%D1%81%D0%B0%D1%8F%20%D0%BA%D0%BE%D1%88%D0%BA%D0%B0%20%D0%BF%D0%BE%D1%80%D0%BE%D0%B4%D1%8B%20%D0%BA%D0%B0%D0%BD%D0%B0%D0%B4%D1%81%D0%BA%D0%B8%D0%B9%20%D1%81%D1%84%D0%B8%D0%BD%D0%BA%D1%81.jpg' alt=""/>
-					<a href="http://ucrazy.ru/pets/page_114.html" >Изящный Иван</a>
-
-				</div>
-				<div class="col"> 
-					<img src='http://ladynumber1.com/wp-content/uploads/2017/03/koshki-porody-sfinks-900x641.jpg' alt=""/>
-					<a href="https://www.yandex.ru/search/?text=%D0%BA%D0%BE%D1%82%D1%8B&lr=47"> Тройняшки</a>
-				</div>
-				
-				<div class="col">
-					<img src='https://avatars.mds.yandex.net/get-pdb/27625/c7ee13df-317a-4e1d-bc7e-066378fd0c68/s1200?webp=false' alt=""/>
-					<a href="https://www.yandex.ru/search/?text=%D0%BA%D0%BE%D1%82%D1%8B&lr=47"> Юсус</a>
-				</div>
-				<div class="col"> 
-					<img src='https://xakep.ru/wp-content/uploads/2016/04/black-bg-cat-sphinx-h.jpg' alt=""/>
-					<a href="https://www.yandex.ru/search/?text=%D0%BA%D0%BE%D1%82%D1%8B&lr=47"> Мария</a>
-			
-				</div>
-				<div class="col"> 
-					<img src='http://warnet.ws/img/578/pod/129.jpg' alt=""/>
-					<a href="https://www.yandex.ru/search/?text=%D0%BA%D0%BE%D1%82%D1%8B&lr=47"> Изабелла</a>
-				</div>
-				<div class="col">
-					<img src='https://avatars.mds.yandex.net/get-pdb/27625/faac9879-10f8-46fe-82f6-031b64a72912/s1200' alt=""/>
-					<a href="https://www.yandex.ru/search/?text=%D0%BA%D0%BE%D1%82%D1%8B&lr=47"> Сеня</a>
-				</div>
-			
-
-		</div>
-
-	</body>
 </html>
