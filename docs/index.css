@@ -1,0 +1,241 @@
+* {
+	box-sizing: inherit;
+	font-family: 'Roboto', sans-serif;
+}
+html {
+    height: 100%;
+    width:100%;
+    min-width: 1300px;
+}
+
+body {
+    background-color: #f2f2f2;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    text-align: center;
+
+}
+
+main {
+    flex-grow: 2;
+    border-bottom: 1px solid white;
+}
+
+footer {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    text-align: center;
+    border-top: 1px solid #b3b3b3;
+}
+
+section.info {
+    color: blue;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin: 10px;
+}
+
+/** Cats photos */
+input[type='radio'] {
+    display: none;
+}
+
+#british_cat:not(:checked) ~ div.photo_card.british {
+    opacity: 0.33;
+}
+
+.nav {
+    background: #cccccc;
+    margin-right: 10px;
+    display: block;
+}
+
+.nav_item {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav label {
+    
+    min-height: 40px;
+    text-align: center;
+    box-shadow: 0px 1px #b3b3b3;
+    border-bottom: 1px solid white;
+    list-style: none;
+}
+
+input#abyssinian_cat:checked ~ .nav > .nav_item[for='abyssinian_cat'], input#british_cat:checked ~ .nav > .nav_item[for='british_cat'], input#russian_cat:checked ~ .nav > .nav_item[for='russian_cat'], input#siamese_cat:checked ~ .nav > .nav_item[for='siamese_cat'] {
+    background-color: #595959;
+    color: #f2f2f2;
+}
+
+input#abyssinian_cat:checked ~ .photos > .photo_card:not(.abyssinian), input#british_cat:checked ~ .photos > .photo_card:not(.british), input#russian_cat:checked ~ .photos > .photo_card:not(.russian), input#siamese_cat:checked ~ .photos > .photo_card:not(.siamese) {
+    opacity: 0.33;
+}
+
+section.photos {
+    display: grid;
+    grid-template-areas: "a b b" "c d e" "f f j" "h h h";
+    overflow: hidden;
+    padding: 0px;
+    margin-top: -5px;
+}
+
+img {
+    display: block;
+    object-fit: cover;
+    object-position: 50% 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.photos div:nth-child(1) {
+    grid-area: a;
+}
+
+.photos div:nth-child(2) {
+    grid-area: b;
+}
+
+.photos div:nth-child(3) {
+    grid-area: c;
+}
+
+.photos div:nth-child(4) {
+    grid-area: d;
+}
+
+.photos div:nth-child(5) {
+    grid-area: e;
+}
+
+.photos div:nth-child(6) {
+    grid-area: f;
+}
+
+.photos div:nth-child(7) {
+    grid-area: j;
+}
+
+.photos div:nth-child(8) {
+    grid-area: h;
+}
+
+.photos div {
+    overflow: hidden;
+    margin: 5px;
+    max-width: 100%;
+}
+
+
+
+/** Rating */
+.rating_heading {
+	text-transform: uppercase;
+	color: red;
+	margin: 5px auto 3px 10px;
+	font-size: 2em;
+	font-weight: 400;
+
+}
+
+
+.rating {
+	align-self: start;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    background: #cccccc;
+    margin-left: 0px;
+    
+}
+
+
+input#sort {
+	display: none;
+	
+}
+
+label[for='sort'] {
+	font-weight: 400;
+	
+	cursor: pointer;
+	justify-self: end;
+	white-space: nowrap;
+}
+
+label[for='sort']::before {
+	content: '';
+	float: right;
+	-webkit-appearance: checkbox;
+	height: 20px;
+	width: 20px;
+	margin-left: 5px;
+}
+
+input#sort:checked ~ label::before {
+	background: linear-gradient(to bottom, #d1e9fc, #80c1f7);
+
+}
+
+
+p.cat_info {
+	display: none;
+	position: absolute;
+	bottom:  15%;
+	height: 40px;
+	align-items: center;
+	color: white;
+	background-color: rgba(100, 100, 100, 0.6);
+	padding: 5px 15px;
+	margin: 0px;
+
+}
+
+div.photo_card:hover p.cat_info {
+	display: flex;
+}
+
+.photo_card {
+	position: relative;
+}
+
+.rating_bar {
+	width: 100px;
+	height: 20px;
+	margin-left: 10px; 
+	border: 1px solid #bfbfbf;
+	display: inline-block;
+	background-image: linear-gradient(to right, #00e64d, white);
+}
+
+span.cat_rate {
+	float: right;
+	width: min-content;
+	margin-right: 10px;
+	font-weight: 700;
+}
+
+
+span.cat_rate[id='10'] ~ .rating_bar {
+	width: 150px;
+	color: green;
+
+}
+
+.rating p {
+	margin-left: 10px;
+}
